@@ -1,0 +1,45 @@
+body{
+  margin: 0;
+}
+@media(min-width: 320px){
+  .drop{
+    height:calc(100vh - 63px);
+    background-color: #1c2956;
+  }
+  section{
+    text-align: center;
+  }
+  p{
+    padding: 10px 10px;
+    margin: 0;
+  }
+  .custom_head{
+    font-weight: normal;
+    margin: 0;
+    padding: 10px 10px;
+  }
+  .intro{
+    background-color: blanchedalmond
+  }
+  .rules{
+    background-color: azure;
+  }
+  .timeline{
+    background-color: wheat;
+  }
+  .footer{
+    background-color:aquamarine;
+  }
+}
+@media (min-width:700px) {
+  .rules-content{
+    display: flex;
+    position: relative;
+    height:40px;
+  }
+  .rules_description{
+    position: absolute;
+    /*opacity: 0;*/
+    margin-top: 40px;
+  }
+}
