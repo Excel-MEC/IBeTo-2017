@@ -4,11 +4,36 @@
     <meta charset="utf-8">
     <title>hor</title>
     <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/jquery.mousewheel.js"></script>
     <style>
+      @keyframes wind {
+        0%{
+          transform: translate(0,0);
+          opacity: 0;
+        }
+        10%{
+          opacity: 1;
+        }
+        80%{
+          opacity: 1;
+        }
+        100%{
+          transform: translate(-1000px,0);
+          opacity: 0;
+        }
+      }
+      .cloud{
+        position: fixed;
+        bottom: 0;
+        width: 200px;
+        left: 0;
+        /*animation-name: wind;
+        animation-timing-function: linear;
+        animation-duration: 100s;
+        animation-iteration-count: infinite;*/
+
+      }
+
       body{
-        overflow-y: hidden;
-        overflow-x: hidden;
         margin: 0;
       }
       section{
@@ -17,11 +42,11 @@
       .container{
         /*overflow-y: hidden;*/
         /*overflow-x: hidden;*/
-        height: 100vh;
       }
       .entity{
-        width: 100vw;
-        float: left;
+        width: 50%;
+        position: relative;
+
       }
       h1{
         margin: 0;
@@ -29,53 +54,46 @@
     </style>
     <script>
     $(document).ready(()=>{
-      var flag=0;
-      $('.container').click(function(){
-        // console.log('called');
+      // alert($('#test').offset().top);
+      $(window).scroll(function(){
+        console.log($('body').scrollTop());
+        if($('body').scrollTop()>=$('#test').offset().top-window.innerHeight){
+          $('.cloud').attr({'style':'position:absolute'});
+          console.log('hllo');
+        }
+        else{
+          $('.cloud').attr({'style':'position:fixed'});
+        }
       });
-      $("body").mousewheel(function(event, delta) {
-          // this.scrollLeft -= (-30*delta);
-          if(delta<0&&flag==0){
-            flag=1;
-            $('body').stop().animate({scrollLeft: window.innerWidth},500,function(){
-              flag=0;
-              console.log('flag_reset');
-            });
-          }
-          else if(delta>0&&flag==0) {
-            flag=1
-            $('body').stop().animate({scrollLeft: -window.innerWidth},500,function(){
-              flag=0;
-              console.log('flag_reset_rev');
-            });
-          }
-          flag=1;
-        event.preventDefault();
-        // console.log(delta);
-      });
-    });
-    $(window).scroll(function(){
-      console.log('called');
     });
     </script>
   </head>
   <body>
     <div class="container">
       <div class="entity">
-			<h2>Post Title Example One</h2>
-			<p>By <a href="http://css-tricks.com/"><strong>CSS</strong>-Tricks</a></p>
-			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse aliquet arcu a ipsum. Nunc arcu est, pulvinar vitae, consectetuer ac, pellentesque interdum, augue. Fusce iaculis nulla et sapien. Aliquam erat volutpat. Etiam iaculis turpis nec libero. Nam adipiscing ullamcorper quam. Pellentesque erat. Sed hendrerit. Duis id nisl. Cras arcu mauris, mollis vel, convallis non, elementum a, tortor. Donec ac est eget elit consequat sollicitudin. In id odio quis tortor volutpat mollis. Nulla iaculis lobortis est. Pellentesque in elit vitae nulla tempus euismod. Nam non erat in lacus rutrum malesuada. Donec commodo purus sed quam posuere eleifend. Nam accumsan.Cras arcu mauris, mollis vel, convallis non, elementum a, tortor. Donec ac est eget elit consequat sollicitudin. In id odio quis tortor volutpat mollis. Nulla iaculis lobortis est. Pellentesque in elit vitae nulla tempus euismod. Nam non erat in lacus rutrum malesuada. Donec commodo purus sed quam posuere eleifend. Nam accumsan.</p>
+  			<h2>Post Title Example One</h2>
+  			<p>By <a href="http://css-tricks.com/"><strong>CSS</strong>-Tricks</a></p>
+  			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse aliquet arcu a ipsum. Nunc arcu est, pulvinar vitae, consectetuer ac, pellentesque interdum, augue. Fusce iaculis nulla et sapien. Aliquam erat volutpat. Etiam iaculis turpis nec libero. Nam adipiscing ullamcorper quam. Pellentesque erat. Sed hendrerit. Duis id nisl. Cras arcu mauris, mollis vel, convallis non, elementum a, tortor. Donec ac est eget elit consequat sollicitudin. In id odio quis tortor volutpat mollis. Nulla iaculis lobortis est. Pellentesque in elit vitae nulla tempus euismod. Nam non erat in lacus rutrum malesuada. Donec commodo purus sed quam posuere eleifend. Nam accumsan.Cras arcu mauris, mollis vel, convallis non, elementum a, tortor. Donec ac est eget elit consequat sollicitudin. In id odio quis tortor volutpat mollis. Nulla iaculis lobortis est. Pellentesque in elit vitae nulla tempus euismod. Nam non erat in lacus rutrum malesuada. Donec commodo purus sed quam posuere eleifend. Nam accumsan.</p>
 
-			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse aliquet arcu a ipsum. Nunc arcu est, pulvinar vitae, consectetuer ac, pellentesque interdum, augue. Fusce iaculis nulla et sapien. Aliquam erat volutpat. Etiam iaculis turpis nec libero. Nam adipiscing ullamcorper quam. Pellentesque erat. Sed hendrerit. Duis id nisl. Cras arcu mauris, mollis vel, convallis non, elementum a, tortor. Donec ac est eget elit consequat sollicitudin. In id odio quis tortor volutpat mollis. Nulla iaculis lobortis est. Pellentesque in elit vitae nulla tempus euismod. Nam non erat in lacus rutrum malesuada. Donec commodo purus sed quam posuere eleifend. Nam accumsan.</p>
-		</div>
-      <section class="entity">
-        <h1>Heading</h1>
-      </section>
+  			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse aliquet arcu a ipsum. Nunc arcu est, pulvinar vitae, consectetuer ac, pellentesque interdum, augue. Fusce iaculis nulla et sapien. Aliquam erat volutpat. Etiam iaculis turpis nec libero. Nam adipiscing ullamcorper quam. Pellentesque erat. Sed hendrerit. Duis id nisl. Cras arcu mauris, mollis vel, convallis non, elementum a, tortor. Donec ac est eget elit consequat sollicitudin. In id odio quis tortor volutpat mollis. Nulla iaculis lobortis est. Pellentesque in elit vitae nulla tempus euismod. Nam non erat in lacus rutrum malesuada. Donec commodo purus sed quam posuere eleifend. Nam accumsan.</p>
+  		</div>
+      <div class="entity">
+  			<h2>Post Title Example One</h2>
+  			<p>By <a href="http://css-tricks.com/"><strong>CSS</strong>-Tricks</a></p>
+  			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse aliquet arcu a ipsum. Nunc arcu est, pulvinar vitae, consectetuer ac, pellentesque interdum, augue. Fusce iaculis nulla et sapien. Aliquam erat volutpat. Etiam iaculis turpis nec libero. Nam adipiscing ullamcorper quam. Pellentesque erat. Sed hendrerit. Duis id nisl. Cras arcu mauris, mollis vel, convallis non, elementum a, tortor. Donec ac est eget elit consequat sollicitudin. In id odio quis tortor volutpat mollis. Nulla iaculis lobortis est. Pellentesque in elit vitae nulla tempus euismod. Nam non erat in lacus rutrum malesuada. Donec commodo purus sed quam posuere eleifend. Nam accumsan.Cras arcu mauris, mollis vel, convallis non, elementum a, tortor. Donec ac est eget elit consequat sollicitudin. In id odio quis tortor volutpat mollis. Nulla iaculis lobortis est. Pellentesque in elit vitae nulla tempus euismod. Nam non erat in lacus rutrum malesuada. Donec commodo purus sed quam posuere eleifend. Nam accumsan.</p>
+
+  			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse aliquet arcu a ipsum. Nunc arcu est, pulvinar vitae, consectetuer ac, pellentesque interdum, augue. Fusce iaculis nulla et sapien. Aliquam erat volutpat. Etiam iaculis turpis nec libero. Nam adipiscing ullamcorper quam. Pellentesque erat. Sed hendrerit. Duis id nisl. Cras arcu mauris, mollis vel, convallis non, elementum a, tortor. Donec ac est eget elit consequat sollicitudin. In id odio quis tortor volutpat mollis. Nulla iaculis lobortis est. Pellentesque in elit vitae nulla tempus euismod. Nam non erat in lacus rutrum malesuada. Donec commodo purus sed quam posuere eleifend. Nam accumsan.</p>
+        <div>
+          <img class="cloud" src="imgs/cloud.png">
+        </div>
+  		</div>
+      <div class="entity" id="test">
+  			<h2>Post Title Example One</h2>
+  			<p>By <a href="http://css-tricks.com/"><strong>CSS</strong>-Tricks</a></p>
+  			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse aliquet arcu a ipsum. Nunc arcu est, pulvinar vitae, consectetuer ac, pellentesque interdum, augue. Fusce iaculis nulla et sapien. Aliquam erat volutpat. Etiam iaculis turpis nec libero. Nam adipiscing ullamcorper quam. Pellentesque erat. Sed hendrerit. Duis id nisl. Cras arcu mauris, mollis vel, convallis non, elementum a, tortor. Donec ac est eget elit consequat sollicitudin. In id odio quis tortor volutpat mollis. Nulla iaculis lobortis est. Pellentesque in elit vitae nulla tempus euismod. Nam non erat in lacus rutrum malesuada. Donec commodo purus sed quam posuere eleifend. Nam accumsan.Cras arcu mauris, mollis vel, convallis non, elementum a, tortor. Donec ac est eget elit consequat sollicitudin. In id odio quis tortor volutpat mollis. Nulla iaculis lobortis est. Pellentesque in elit vitae nulla tempus euismod. Nam non erat in lacus rutrum malesuada. Donec commodo purus sed quam posuere eleifend. Nam accumsan.</p>
+
+  			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse aliquet arcu a ipsum. Nunc arcu est, pulvinar vitae, consectetuer ac, pellentesque interdum, augue. Fusce iaculis nulla et sapien. Aliquam erat volutpat. Etiam iaculis turpis nec libero. Nam adipiscing ullamcorper quam. Pellentesque erat. Sed hendrerit. Duis id nisl. Cras arcu mauris, mollis vel, convallis non, elementum a, tortor. Donec ac est eget elit consequat sollicitudin. In id odio quis tortor volutpat mollis. Nulla iaculis lobortis est. Pellentesque in elit vitae nulla tempus euismod. Nam non erat in lacus rutrum malesuada. Donec commodo purus sed quam posuere eleifend. Nam accumsan.</p>
+  		</div>
     </div>
   </body>
-  <script>
-    $('.container').wrapInner('<table><tr>');
-    $('.entity').wrap('<td>');
-
-  </script>
 </html>

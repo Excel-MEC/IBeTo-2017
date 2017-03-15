@@ -1,0 +1,30 @@
+body{
+  margin: 0;
+}
+@media(min-width:768px){
+  .main{
+    height: 100vh;
+    position: relative;
+  }
+  .main>div{
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  .para1{
+    background-image: url('../imgs/par/parallax1.png');
+  }
+  .para2{
+    background-image: url('../imgs/par/parallax2.png');
+  }
+  .para3{
+    background-image: url('../imgs/par/parallax3.png');
+  }
+  .para4{
+    background-image: url('../imgs/par/parallax4.png');
+  }
+  .para5{
+    background-image: url('../imgs/par/parallax5.png');
+  }
+}
