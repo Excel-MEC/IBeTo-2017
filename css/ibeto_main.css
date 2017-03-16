@@ -8,23 +8,52 @@ body{
   }
   .main>div{
     height: 100%;
-    position: absolute;
+    position: fixed;
     bottom: 0;
+    z-index: 0;
+    /*background-position: bottom;*/
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 100%;
   }
   .para1{
-    background-image: url('../imgs/par/parallax1.png');
+    background-image: url('../imgs/para/7.png');
+    /*background-attachment: fixed;*/
+    /*background-size: cover;*/
   }
   .para2{
-    background-image: url('../imgs/par/parallax2.png');
+    background-image: url('../imgs/para/6.png');
   }
   .para3{
-    background-image: url('../imgs/par/parallax3.png');
+    background-image: url('../imgs/para/5.png');
   }
   .para4{
-    background-image: url('../imgs/par/parallax4.png');
+    background-image: url('../imgs/para/4.png');
   }
   .para5{
-    background-image: url('../imgs/par/parallax5.png');
+    background-image: url('../imgs/para/3.png');
+  }
+  .para6{
+    background-image: url('../imgs/para/2.png');
+  }
+  .para7{
+    background-image: url('../imgs/para/1.png');
+  }
+  .container{
+    max-width: 960px;
+    padding-top: 20px;
+    color: white;
+    margin: auto;
+    /*display: flex;*/
+  }
+  .intro{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+  }
+  .vid{
+    margin: auto;
+    width: 80%;
+    text-align: center;
   }
 }
