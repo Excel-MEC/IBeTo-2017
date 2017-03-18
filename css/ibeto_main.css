@@ -1,14 +1,28 @@
 body{
   margin: 0;
 }
+section{
+  position: relative;
+  background-color: white;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
 @media(min-width:768px){
   .main{
     height: 100vh;
     position: relative;
   }
+  .title{
+    margin: 0;
+    font-family: 'Kaushan Script', cursive;
+    text-align: center;
+    font-size: 50px;
+    color: #6e396c;
+    font-weight: normal;
+  }
   .main>div{
     height: 100%;
-    position: fixed;
+    position: absolute;;
     bottom: 0;
     z-index: 0;
     /*background-position: bottom;*/
@@ -55,5 +69,111 @@ body{
     margin: auto;
     width: 80%;
     text-align: center;
+  }
+}
+
+
+/*timeline styles*/
+
+@media(min-width:320px){
+  .tl-container{
+    width: 90%;
+    margin: auto;
+  }
+  .line{
+    width: 2px;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    margin-left: 34px;
+    z-index: 0;
+  }
+
+  .icon{
+    width: 50px;
+    position: relative;
+    z-index: 99;
+  }
+  .tl-entry{
+    display: flex;
+    margin: 10px;
+  }
+}
+@media(min-width:768px){
+  h1{
+    margin: 0;
+  }
+  .tl-container{
+    width: unset;
+  }
+  .item{
+    width: 40%;
+    right: 0%;
+    display: block;
+    position: relative;
+    /*text-align: center;*/
+    margin: auto;
+    margin-top: 40px;
+    padding-top: 25px;
+    border-top: 1px solid black;
+
+  }
+  /*.item h1::before{
+    content: '';
+
+    background-color: ;
+    border: 10px solid transparent;
+    position: absolute;
+    top: 8px;
+  }*/
+  .left{
+    transform: translateX(calc(-50% + -40px));
+    text-align: left;
+    /*left: 0;*/
+  }
+  /*.left h1::before{
+    right: -10px;
+    border-right: none;
+    border-left-color: black;
+  }*/
+  .right{
+    transform: translateX(calc(50% + 40px));
+    text-align: right;
+    /*float: right;*/
+  }
+
+  /*.right h1::before{
+    left: -10px;
+    border-left: none;
+    border-right-color: black;
+  }*/
+  .line{
+    width: 5px;
+    height: calc(100% - 100px);
+    background-color: black;
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .tl-entry{
+    max-width: 960px;
+    margin: auto;
+    display: block;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .tl-entry::after{
+    display: table;
+    content: "";
+    clear: both;
+  }
+  .icon-container{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .icon{
+    width: 80px;
   }
 }

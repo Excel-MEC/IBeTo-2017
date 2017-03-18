@@ -11,25 +11,32 @@ $(document).ready(function(){
 	// 	}
 
 	// });
-	$('.rules_details').html("<p>"+rules[0]+"</p>");
+	$('.rule_template').html(rules[0]);
 	$('.rules_data').click(function(){
 		var clickedElement = $(this).attr('id');
 		console.log(clickedElement);
 		if (clickedElement=="General") {
-			var html = "<p>"+rules[0]+"</p>";
-			$('.rules_details').html(html);
+			var html = rules[0];
+			fadeToggle(html);
 		}
 		else if (clickedElement=="Team_Size") {
-			var html = "<p>"+rules[1]+"</p>";
-			$('.rules_details').html(html);
+			var html = rules[1];
+			fadeToggle(html)
 		}
 		else if (clickedElement=="Eligibility") {
-			var html = "<p>"+rules[2]+"</p>";
-			$('.rules_details').html(html);
+			var html = rules[2];
+			fadeToggle(html);
 		}
 		else{
-			var html = "<p>"+rules[3]+"</p>";
-			$('.rules_details').html(html);
+			var html = rules[3];
+			fadeToggle(html);
 		}
 	});
 });
+
+function fadeToggle(html){
+	$('.rule_template').animate({opacity: 0},300,function(){
+		$('.rule_template').html(html);
+		$('.rule_template').animate({opacity: 1},300);
+	});
+}
