@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Timeline</title>
+  </head>
+  <style>
+    .timeline p{
+      position: absolute;
+      right: 0;
+      top:0;
+      margin: 0;
+      transform: translate(50%,-100%);
+    }
+    .timeline{
+      background-image: url('imgs/dep.png');
+      background-position: center;
+      position: relative;
+      width: 140px;
+      height: 512px;
+      background-repeat: no-repeat;
+    }
+    .timeline2{
+      background-image: url('imgs/dep2.png');
+      background-position: center;
+      position: relative;
+      width: 140px;
+      height: 512px;
+      background-repeat: no-repeat;
+    }
+    .timeline2 p{
+      right: 0;
+      bottom: 0;
+      transform: translate(50%,100%);
+      position: absolute;
+      margin: 0;
+    }
+  </style>
+  <body>
+    <div style="display:flex;width:280px;">
+      <div class="timeline">
+        <!-- <img src="imgs/dep.png"> -->
+        <p>some details</p>
+      </div>
+      <div class="timeline2">
+        <!-- <img src="imgs/dep.png"> -->
+        <p>some details</p>
+      </div>
+    </div>
+  </body>
+</html>

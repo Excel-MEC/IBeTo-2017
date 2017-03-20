@@ -1,0 +1,94 @@
+body{
+	margin: 0;
+}
+.rulesCircle{
+	display: flex;
+	position: relative;
+	height: 100vh;
+}
+.circle{
+	width: 400px;
+	position: absolute;
+	height: 400px;
+	top: 50%;
+	border-radius: 100%;
+	border-color: #000000;
+	border-width: 3px;
+	border-style: solid;
+	transform: translate(-50%,-50%);
+}
+.rulesicon{
+	position: absolute;
+	width: 100%;
+	text-align: right;
+	top: 50%;
+	transform: translate(0%,-50%)rotate(0deg);
+	transition: transform 1s;
+}
+
+.icon{
+	transform: translate(50%,0%);
+}
+h2{
+	text-align: center;
+}
+.text{
+	margin: auto;
+	/*transform: translateY(200%);*/
+}
+
+.initial{
+	transform: translate(0,-50%) rotate(180deg);
+}
+
+/*.animate-tohidden-fwd{
+	animation-name: currToHiddenFwd;
+	animation-duration: 1s;
+}
+.animate-tohidden-bwd{
+	animation-name: currToHiddenBwd;
+	animation-duration: 1s;
+}
+.animate-tocurr-fwd{
+	animation-name: hiddenToCurrFwd;
+	animation-duration: 1s;
+}
+.animate-tocurr-bwd{
+	animation-name: hiddenToCurrBwd;
+	animation-duration: 1s;
+}
+
+
+@keyframes currToHiddenFwd{
+	0%{
+		transform: translate(0%,-50%) rotate(0deg);
+	}
+
+	100%{
+		transform: translate(0%,-50%) rotate(-180deg);
+	}
+}
+@keyframes currToHiddenBwd{
+	0%{
+		transform: translate(0%,-50%) rotate(-0deg);
+	}
+	100%{
+		transform: translate(0%,-50%) rotate(180deg);
+	}
+}
+@keyframes hiddenToCurrFwd{
+	0%{
+		transform: translate(0%,-50%) rotate(180deg);
+	}
+	100%{
+		transform: translate(0%,-50%) rotate(0deg);
+	}
+}
+@keyframes hiddenToCurrBwd{
+	0%{
+		transform: translate(0%,-50%) rotate(180deg);
+	}
+	100%{
+		transform: translate(0%,-50%) rotate(0deg);
+	}
+}*/

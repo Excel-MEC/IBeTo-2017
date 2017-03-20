@@ -1,5 +1,6 @@
 body{
   margin: 0;
+  overflow: hidden;
 }
 section{
   position: relative;
@@ -9,7 +10,7 @@ section{
 }
 @media(min-width:768px){
   .main{
-    height: 100vh;
+    /*height: 100vh;*/
     position: relative;
   }
   .title{
@@ -69,6 +70,15 @@ section{
     margin: auto;
     width: 80%;
     text-align: center;
+  }
+  .contact{
+    background-image: url('imgs/contact.png');
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    height: 100vh;
+  }
+  .dial{
+    height: 100vh;
   }
 }
 
