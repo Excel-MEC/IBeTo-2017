@@ -1,33 +1,50 @@
 function animationinit() {
-	$('#filament').css({'animation-name':'animatefil_entry','opacity':'1'});
-	$('#bulb-broken').css({'transition':'none'});
-	$('#bulb-intact').css({'transition':'none'});
+	$('#1').removeClass('hiddentext');
 	setTimeout(function(){
-		$('#bulb').css({'opacity':'1'});
+		$('#filament').css({'animation-name':'animatefil_entry','opacity':'1'});
+		$('#bulb-broken').css({'transition':'none'});
+		$('#bulb-intact').css({'transition':'none'});
 	},1000);
 	setTimeout(function(){
-		$('#base').css({'transform':'translate(0,0)','opacity':'1'});
+		$('#bulb').css({'opacity':'1'});
 	},2000);
+	setTimeout(function(){
+		$('#base').css({'transform':'translate(0,0)','opacity':'1'});
+	},3000);
+	setTimeout(function(){
+		$('#1').addClass('hiddentext');
+		$('#2').removeClass('hiddentext');
+	},4000);
 	setTimeout(function(){
 		$('.st1').addClass('flicker');
 		setTimeout(function(){
+			$('#2').addClass('hiddentext');
+			$('#3').removeClass('hiddentext');
 			$('.st1').removeClass('flicker');;
 			$('.st1').css({'fill':'#d8d8d8'});
-		},1000);
-		setTimeout(function(){
-			$('#filament-intact').css({'transform':'translate(0,100%)','opacity':'0'});
-		},2000);
-		setTimeout(function(){
-			$('#filament-intact').css({'transform':'translate(0,0)','opacity':'1'});
 		},3000);
+		setTimeout(function(){
+			$('#3').addClass('hiddentext');
+			$('#filament-intact').css({'transform':'translate(0,100%)','opacity':'0'});
+		},5000);
+		setTimeout(function(){
+			$('#4').removeClass('hiddentext');
+			$('#filament-intact').css({'transform':'translate(0,0)','opacity':'1'});
+		},6500);
+		setTimeout(function(){
+			$('#4').addClass('hiddentext');
+			$('#5').removeClass('hiddentext');
+		},8000);
 		setTimeout(function(){
 			$('.st1').css({'fill':'#FFC533'});
 			$('#glow').css({'opacity':'1'});
 			$('#filament-broken').css({'transform':'translate(0,0)'});
-		},4000);
+		},9000);
 		setTimeout(function(){
-			// $('#glow').css({'transform':'scale(1.01)'});
-		},4500);
+			// $('#glow').css({'transform':'scale(1.2)'});
+			$('#5').addClass('hiddentext');
+			$('#6').removeClass('hiddentext');
+		},11000);
 		setTimeout(function(){
 			$('#filament-intact').css({'opacity':'0'});
 			$('#filament-broken').css({'opacity':'1'});
@@ -37,23 +54,34 @@ function animationinit() {
 			$('#bulb-broken').css({'transition':'transform 0.5s,opacity 0.5s'});
 			$('#bulb-intact').css({'transition':'transform 0.5s,opacity 0.5s'});
 			$('.st1').css({'fill':'#d8d8d8'});
-		},5000);
+		},12000);
 		setTimeout(function(){
+			$('#6').addClass('hiddentext');
 			$('#filament-broken').css({'transform':'translate(0,100%)','opacity':'0'});
 			$('#filament-intact').css({'transform':'translate(0,100%)'});
 			$('#bulb-broken').css({'transform':'translate(0,100%)','opacity':'0'});
-		},6000);
+		},14000);
+		setTimeout(function(){
+			$('#7').removeClass('hiddentext');
+		},16000);
+		setTimeout(function(){
+			$('#7').addClass('hiddentext');
+			$('#8').removeClass('hiddentext');
+		},17500);
 		setTimeout(function(){
 			$('#bulb-intact').css({'transform':'translate(0,0)','opacity':'1'});
 			$('#filament-intact').css({'transform':'translate(0,0)','opacity':'1'});
-		},7000);
+		},18500);
 		setTimeout(function(){
 			// $('.st0').css({'fill':'#FFC533'});
+			$('#8').addClass('hiddentext');
+			$('#9').removeClass('hiddentext');
 			$('.st1').css({'fill':'#FFC533'});
-		},8000);
+		},20500);
 		setTimeout(function(){
+			$('#10').removeClass('hiddentext');
 			$('.bulblit').css({'transform':'translate(-50%,-50%) '});
 			$('#glow').css({'opacity':'1'});
-		},9000);
-	},3000);
+		},22500);
+	},5000);
 }

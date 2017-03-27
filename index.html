@@ -37,6 +37,7 @@
             if(index==4){
               if($(window).width()>1024){
                 $.fn.fullpage.setAllowScrolling(false);
+                $.fn.fullpage.setKeyboardScrolling(false);
                 setTimeout(trigger,1000);
               }
             }
@@ -64,7 +65,16 @@
     </div>
     <div id="fullpage">
       <div class="section" id="cover1" style="background-color:#264348;">
-        <p class="descanim">Ibeto</p>
+        <p class="descanim hiddentext" id="1">An IDEA lit by a poor filament</p>
+        <p class="descanim hiddentext" id="2">Flickers</p>
+        <p class="descanim hiddentext" id="3">Dies</p>
+        <p class="descanim hiddentext" id="4">An IDEA powered by high charge</p>
+        <p class="descanim hiddentext" id="5">Burns</p>
+        <p class="descanim hiddentext" id="6">Breaks</p>
+        <p class="descanim hiddentext" id="7">But</p>
+        <p class="descanim hiddentext" id="8">An IDEA driven by the right amount of innovation and social responsibility</p>
+        <p class="descanim hiddentext" id="9">Lights, Shines</p>
+        <p class="descanim hiddentext change" id="10">and Triggers CHANGE!</p>
       	<div class="bulblit">
       						<?xml version="1.0" encoding="utf-8"?>
       		<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -150,6 +160,8 @@
       		</g>
       		</svg>
       	</div>
+        <div>
+        </div>
       </div>
       <div class="section ibetointro">
         <div class="container intro">
@@ -205,8 +217,8 @@
                 <p>Providing easy educational access for all</p>
                 <p>Betterment of General Health care in Rural Areas</p>
                 <p>Combating environmental degradation while ensuring energy conservation</p>
-                <button class="button">Register Here</button>
-                <button class="button"><a href="assets/rules.pdf">Rules</a></button>
+                <a class="button" target="_blank" href="www.google.com"><h3>Register Here</h3></a>
+                <a class="button" target="_blank" href="assets/rules.pdf"><h3>Rules</h3></a>
             </div>
       		</div>
       		<div class="text initial" id="hackcontent">
