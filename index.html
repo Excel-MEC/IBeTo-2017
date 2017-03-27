@@ -5,177 +5,209 @@
     <title>IBeTo</title>
     <meta name="viewport" content="width=device-width">
     <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-    <!-- <link rel="stylesheet" href="css/ibeto_main.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/dial.css">
+    <link rel="stylesheet" href="css/ibeto_main.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css">
-    <!-- <script src="js/jquery.fullPage.min.js"></script> -->
+    <script src="js/jquery.fullPage.min.js"></script>
     <script src="js/ibeto.js"></script>
     <script src ="js/index.js"></script>
     <script src="js/dial.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/dial.css">
-    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+  	<script src="js/jquery.mousewheel.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Josefin+Sans" rel="stylesheet">
+    <style>
+
+    </style>
     <script>
     $(document).ready(function() {
     $('#fullpage').fullpage({
-      // autoScrolling: false
+      // autoScrolling: false,
         afterLoad: function(anchorLink, index){
-          if(index==3){
-            $.fn.fullpage.setAllowScrolling(false);
-            setTimeout(trigger,1000);
+          if(index==6){
+            if($(window).width()>700){
+              $.fn.fullpage.setAllowScrolling(false);
+              setTimeout(trigger,1000);
+            }
+          }
+          if(index==5){
+            $('#cup').removeClass('hidden');
+            $('#marker').removeClass('hidden');
+            $('#laptop').removeClass('hidden');
+            $('#pad').removeClass('hidden');
           }
         }
     });
+    if($(window).width()<700){
+      $.fn.fullpage.setAutoScrolling(false);
+      $.fn.fullpage.setFitToSection(false);
+      $('#cover1').css({'display':'none'});
+      $('#cover2').css({'display':'none'});
+      $('#cover3').css({'display':'none'});
+    }
 });
     </script>
   </head>
   <body>
-    <!-- <section class="cover"></section> -->
     <div id="fullpage">
-      <!-- <section class="main" id="main">
-        <div class="para1"></div>
-        <div class="para2"></div>
-        <div class="para3"></div>
-        <div class="para4"></div>
-        <div class="para5"></div>
-        <div class="para6"></div>
-        <div class="para7"></div>
-      </section> -->
-      <div class="section" style="background-color: #290e28;z-index:99" id="introsec">
-        <div class="container">
-          <h1 class="title">IBeTo</h1>
-          <div class="intro">
-            <p>The event, Innovations for a Better Tomorrow, was conceived by the organizers of Excel  based on the conviction that a simple idea may give rise to a path-breaking development. We believe that as students, as engineers and as citizens of the nation, we have a responsibility to give back to society and to use our knowledge and expertise to propel India to new heights. Through IBeTo, innovations and ideas from individuals are brought to the forefront, thoroughly developed and fabricated into products that will have a direct impact on the lives of people. IBeTo hopes to contribute positively to the growth of our nation, setting the stage for sustainable and inclusive development.</p>
-          </div>
-          <div class="vid">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/rpIlP6pI8fo" frameborder="0" allowfullscreen></iframe>
+      <div class="section" id="cover1">
+      </div>
+      <div class="section coverimg img1" id="cover2">
+      </div>
+      <div class="section coverimg img2" id="cover3">
+      </div>
+      <div class="section ibetointro">
+        <div class="container intro">
+          <div style="text-align:center;color:white;">
+            <img src="imgs/ibetoLogoFinal.png" class="ibetologo">
+            <div>
+              <p>IBeTo (Innovations for a Better Tomorrow) is the flagship event of Excel. It is a search for ideas and innovators capable of aiding social upliftment. IBETO was born out of the conviction that technology has the answers to some of society’s most daunting challenges. This national level pursuit has received overwhelming responses from all over India and have brought several innovations to the forefront. The brightest of these ideas are recognized and mentored to realize the end product. IBeTo, thus, strives to be the bridge joining social relevance and technical innovation, to connect the pioneer and the populace.</p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="rules section" id="rulesec">
-        <div class="rules_container">
-          <div class="rules_heading">
-            <h1>Rules</h1>
-          </div>
-      		<div class="rules_content">
-      			<div class="General rules_data" id="General">
-      				<img src="imgs/team(1).png">
-      				<h2>General</h2>
-      				<p>Some rules about general</p>
-      			</div>
-      			<div class="team_size rules_data" id="Team_Size">
-      				<img src="imgs/team(1).png">
-      				<h2>Team size</h2>
-      				<p>Some rules about Team size</p>
-      			</div>
-      			<div class="eligibility rules_data" id="Eligibility">
-      				<img src="imgs/team(1).png">
-      				<h2>Eligibility</h2>
-      				<p>Some rules about Eligibility</p>
-      			</div>
-      			<div class="abstract rules_data" id="Abstract_details">
-      				<img src="imgs/team(1).png">
-      				<h2>Abstract</h2>
-      				<p>Some rules about abstract</p>
-      			</div>
-      		</div>
+      <div class="section">
+        <div class="parallax">
+          <img class="hidden" src="imgs/cup.png" id="cup">
+          <img class="hidden" src="imgs/laptop1.png" id="laptop">
+          <img class="hidden" src="imgs/notepad.png" id="pad">
+          <img class="hidden" style="" src="imgs/marker.png" id="marker">
         </div>
-        <div class="rules_details">
-          <p class="rule_template"></p>
-        </div>
-    	</div>
-      <!-- <section class="tl-container" style="position: relative;">
-        <div class="line"></div>
-        <div class="tl-entry">
-          <div class="icon-container">
-            <img class="icon" src="imgs/youtube.png">
-          </div>
-          <div class="item right">
-            <h1>Some deadline</h1>
-            <p>some description too</p>
+        <div class="container hackathon">
+          <h2>HACKATHON</h2>
+          <p>The IBeTo Hackathon is being held so as to get a working prototype based on the problem statements. These prototypes can further be iterated and be launched into the market. In addition to the prize money, the top 3 contestants will get a direct entry into the IBeTo finals which guarantees them proper mentorship and guidance from the experts in their field.</p>
+          <div class="rewards">
+            <h3>Duration: 24 hours</h3>
+            <h3>Prizes worth 15k</h3>
           </div>
         </div>
-        <div class="tl-entry">
-          <div class="icon-container">
-            <img class="icon" src="imgs/youtube.png">
-          </div>
-          <div class="item left">
-            <h1>Some deadline</h1>
-          </div>
-        </div>
-        <div class="tl-entry">
-          <div class="icon-container">
-            <img class="icon" src="imgs/youtube.png">
-          </div>
-          <div class="item right">
-            <h1>Some deadline</h1>
-            <p>some description too</p>
-          </div>
-        </div>
-        <div class="tl-entry">
-          <div class="icon-container">
-            <img class="icon" src="imgs/youtube.png">
-          </div>
-          <div class="item left">
-            <h1>Some deadline</h1>
-          </div>
-        </div>
-        <div class="tl-entry">
-          <div class="icon-container">
-            <img class="icon" src="imgs/youtube.png">
-          </div>
-          <div class="item right">
-            <h1>Some deadline</h1>
-            <p>some description too</p>
-          </div>
-        </div>
-        <div class="tl-entry">
-          <div class="icon-container">
-            <img class="icon" src="imgs/youtube.png">
-          </div>
-          <div class="item left">
-            <h1>Some deadline</h1>
-          </div>
-        </div>
-        <div class="tl-entry">
-          <div class="icon-container">
-            <img class="icon" src="imgs/youtube.png">
-          </div>
-          <div class="item right">
-            <h1>Some deadline</h1>
-            <p>some description too</p>
-          </div>
-        </div>
-        <div class="tl-entry">
-          <div class="icon-container">
-            <img class="icon" src="imgs/youtube.png">
-          </div>
-          <div class="item left">
-            <h1>Some deadline</h1>
-          </div>
-        </div>
-
-      </section> -->
+      </div>
       <section class="dial section" id="dial">
         <div class="rulesCircle">
-      		<div class="circle">
-      			<div class="rulesicon" id="intro">
+      		<ul class="circle">
+      			<li class="rulesicon active_tab" id="intro">
+      				<img src="imgs/qmark.png" class="icon">
+      			</li>
+      			<li class="rulesicon" id="hack">
+      				<img src="imgs/timeline.png" class="icon ">
+      			</li>
+      			<!-- <li class="rulesicon" id="rules">
       				<img src="imgs/youtube.png" class="icon ">
-      			</div>
-      			<div class="rulesicon initial" id="hack">
-      				<img src="imgs/youtube1.png" class="icon ">
-      			</div>
-      			<div class="rulesicon initial" id="rules">
-      				<img src="imgs/youtube.png" class="icon ">
-      			</div>
-      			<div class="rulesicon initial" id="time">
-      				<img src="imgs/youtube1.png" class="icon ">
-      			</div>
+      			</li> -->
+      			<li class="rulesicon" id="time">
+      				<img src="imgs/Contacts.png" class="icon ">
+      			</li>
+      		</ul>
+      		<div class="text" id="introcontent">
+            <div class="content_area">
+              <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/rpIlP6pI8fo" frameborder="0" allowfullscreen></iframe>
+        			<h2>Problem Statements</h2>
+        			<p>IBeTo 2017 will curate and foster ideas that adhere to the following problem statements and ultimately usher in a better tomorrow:</p>
+                <p>Revolutionizing Road Safety</p>
+                <p>Innovations beneficial for the Differently abled</p>
+                <p>Providing easy educational access for all</p>
+                <p>Betterment of General Health care in Rural Areas</p>
+                <p>Combating environmental degradation while ensuring energy conservation</p>
+            </div>
       		</div>
-      		<div class="text">
-      			<h2>General</h2>
-      			<p>Some rules about General</p>
+      		<div class="text initial" id="hackcontent">
+            <div class="content_area timeline_area">
+              <h2 style="color:white;padding:150px;">Timeline</h2>
+              <div style="display:flex;height:100%;margin:auto;" class="timeline-content">
+                <div class="timeline">
+                  <div>
+                    <h3>APR 3rd-4th</h3>
+                    <p>Hackathon</p>
+                  </div>
+                </div>
+                <div class="timeline2">
+                  <div>
+                    <h3>APR 1st-29th</h3>
+                    <p>Abstracts invitation</p>
+                  </div>
+                </div>
+                <div class="timeline">
+                  <div>
+                    <h3>APR 29</h3>
+                    <p>Teams shortlisting</p>
+                  </div>
+                </div>
+                <div class="timeline2">
+                  <div>
+                    <h3>MAY 7</h3>
+                    <p>Assign mentors</p>
+                  </div>
+                </div>
+                <div class="timeline">
+                  <div>
+                    <h3>MAY 20</h3>
+                    <p>Submission of project plan</p>
+                  </div>
+                </div>
+                <div class="timeline2">
+                  <div>
+                    <h3>MAY 27</h3>
+                    <p>Evaluation of plans</p>
+                  </div>
+                </div>
+                <div class="timeline">
+                  <div>
+                    <h3>JUN 29</h3>
+                    <p>Mid evaluation</p>
+                  </div>
+                </div>
+                <div class="timeline2">
+                  <div>
+                    <h3>JUL 26</h3>
+                    <p>Evaluation of prototype</p>
+                  </div>
+                </div>
+                <div class="timeline">
+                  <div>
+                    <h3>AUG 26</h3>
+                    <p>Evaluation of development</p>
+                  </div>
+                </div>
+                <div class="timeline2">
+                  <div>
+                    <h3>SEP 18</h3>
+                    <p>Video and presentation</p>
+                  </div>
+                  <img class="college" src="imgs/college.png">
+                </div>
+              </div>
+            </div>
+      		</div>
+      		<div class="text initial" id="timecontent">
+      			<div class="content_area">
+      				<h2>Contact Us</h2>
+      				<div class="names_container">
+                <div>
+                  <h3>Arjun Saju</h3>
+                  <p>Excel Chairman</p>
+                  <p>+91 8943239997</p>
+                  <p>arjunsaju@excelmec.org</p>
+                </div>
+                <div>
+                  <h3>Sharon Rachel Manu</h3>
+                  <p>Joint Secretary</p>
+                  <p>+91 9633554696</p>
+                  <p>sharonrachelmanu@excelmec.org</p>
+                </div>
+                <div>
+                  <h3>Elza Tess Varkey</h3>
+                  <p>Social Initiatives Head</p>
+                  <p>+91 9562391591</p>
+                  <p>elzatessvarkey@excelmec.org</p>
+                </div>
+              </div>
+              <div class="logos_section">
+                <img src="imgs/excel2017.png">
+              </div>
+      			</div>
       		</div>
       	</div>
       </section>
+    </div>
   </body>
 </html>

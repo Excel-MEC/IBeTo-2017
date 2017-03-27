@@ -1,21 +1,52 @@
 body{
   margin: 0;
   overflow: hidden;
+  font-family: 'Josefin Sans',sans-serif;
 }
 section{
   position: relative;
   background-color: white;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  /*padding-top: 50px;
+  padding-bottom: 50px;*/
+}
+.parallax{
+  position: absolute;
+  z-index: 0;
+  background-image: url('../imgs/bghack.jpg');
+  height: 100%;
+  top: 0;
+  width: 100%;
+}
+
+@media(min-width:320px){
+  div.coverimg{
+    display: none;
+  }
+  .ibetologo{
+    width: 200px;
+  }
+  #cup,#pad,#marker,#laptop{
+    display: none;
+  }
+  .ibetointro{
+    font-size: 15px;
+    background-color:#002;
+  }
 }
 @media(min-width:768px){
   .main{
     /*height: 100vh;*/
     position: relative;
   }
+  .ibetointro{
+    background-color:#002;
+    font-size:20px;
+  }
+  .ibetologo{
+    width: 400px;
+  }
   .title{
     margin: 0;
-    font-family: 'Kaushan Script', cursive;
     text-align: center;
     font-size: 50px;
     color: #6e396c;
@@ -31,40 +62,20 @@ section{
     background-repeat: no-repeat;
     width: 100%;
   }
-  .para1{
-    background-image: url('../imgs/para/7.png');
-    /*background-attachment: fixed;*/
-    /*background-size: cover;*/
-  }
-  .para2{
-    background-image: url('../imgs/para/6.png');
-  }
-  .para3{
-    background-image: url('../imgs/para/5.png');
-  }
-  .para4{
-    background-image: url('../imgs/para/4.png');
-  }
-  .para5{
-    background-image: url('../imgs/para/3.png');
-  }
-  .para6{
-    background-image: url('../imgs/para/2.png');
-  }
-  .para7{
-    background-image: url('../imgs/para/1.png');
-  }
   .container{
     max-width: 960px;
-    padding-top: 20px;
-    color: white;
+    /*padding-top: 20px;*/
+    /*color: white;*/
     margin: auto;
     /*display: flex;*/
   }
   .intro{
-    width: 70%;
+    display: flex;
+    /*text-align: center;*/
+  }
+  .intro>*{
+    height: 100%;
     margin: auto;
-    text-align: center;
   }
   .vid{
     margin: auto;
@@ -80,8 +91,194 @@ section{
   .dial{
     height: 100vh;
   }
+  .hackathon{
+    /*height: 100%;*/
+    text-align: center;
+    padding-top: 50px;
+    position: relative;
+    z-index: 99;
+    padding-bottom: 50px;
+  }
+  .hackathon>h2{
+    margin-bottom: 50px;
+    padding-bottom: 10px;
+    font-size: 25px;
+    position: relative;
+    font-family: 'Comfortaa', cursive;
+  }
+  .hackathon>h2::after{
+    position: absolute;
+    content: '';
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    width: 100%;
+    height: 15px;
+    margin: 0 0 0 -175px;
+    background-image: url('../imgs/title-underline.png');
+    background-repeat: no-repeat;
+  }
+  .parallax{
+    position: absolute;
+    z-index: 0;
+    background-image: url('../imgs/bghack.jpg');
+    height: 100%;
+    top: 0;
+    width: 100%;
+  }
+  .parallax>img{
+    width: 200px;
+    position: absolute;
+  }
+  #cup,#pad,#marker,#laptop{
+    display: block;
+  }
+  #cup{
+    left: 5%;
+    top: 20%;
+    width: 150px;
+  }
+  #laptop{
+    right: 10%;
+    top: 5%;
+    width: 300px;
+  }
+  #pad{
+    top: 70%;
+    left: 20%;
+  }
+  #marker{
+    right: 5%;
+    top: 50%;
+    width:unset;
+    height:200px;
+  }
+  .rule_template{
+    text-align: left;
+  }
+  .rule_template p{
+    margin:0;
+    text-align: left;
+    font-size: 15px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+  .names_container{
+    display: flex;
+
+  }
+  .names_container>div{
+    padding: 20px;
+    width: 30%;
+  }
+  .parallax>img{
+    transition: transform 0.2s;
+    transition-delay: 0.1s;
+  }
+  .hidden{
+    transform: translate(0,1000px);
+  }
+  .coverimg{
+    display: unset;
+    width: 100%;
+    height: 100%;
+    background-position: bottom;
+  }
+  .img1{
+    background-image: url('../imgs/night1.png');
+    background-size: cover;
+  }
+  .img2{
+    background-image: url('../imgs/night2.png');
+    background-size: cover;
+  }
+  .timeline_area{
+    transform: translateY(-25%);
+    text-align: center;
+  }
+  .logos_section{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+  }
+  .logos_section img{
+    height: 80px;
+  }
+  .rewards{
+    display: flex;
+    justify-content: center;
+    color: #1f7d56;
+  }
+  .rewards h3{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .timeline-content{
+    width: 600px;
+  }
 }
 
+@media(min-width:1024px){
+  /*timeline*/
+  .timeline div{
+    position: absolute;
+    width: 120%;
+    right: 0;
+    top:0;
+    margin: 0;
+    transform: translate(50%,-100%);
+    text-align: center;
+    color: white;
+  }
+  .timeline div h3,.timeline div p{
+    font-size: 15px;
+  }
+  .timeline2 div h3,.timeline2 div {
+    font-size: 15px;
+  }
+  .timeline{
+    background-image: url('../imgs/road12.png');
+    background-position: center;
+    background-size: 70px 221px;
+    position: relative;
+    width: 70px;
+    height: 221px;
+    background-repeat: no-repeat;
+    margin-top: auto;
+    margin-bottom: auto;
+    /*transform: rotate(180deg);*/
+  }
+  .timeline2{
+    background-image: url('../imgs/road22.png');
+    background-position: center;
+    position: relative;
+    background-size: 70px 221px;
+    width: 70px;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 221px;
+    background-repeat: no-repeat;
+  }
+  .timeline2 div{
+    left: 100%;
+    bottom: 0;
+    width: 120%;
+    transform: translate(-50%,100%);
+    position: absolute;
+    margin: 0;
+    color: white;
+    text-align: center;
+  }
+  .content_area{
+    width: 70%;
+  }
+  .college{
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    left: 100%;
+  }
+}
 
 /*timeline styles*/
 
@@ -184,6 +381,9 @@ section{
     transform: translateX(-50%);
   }
   .icon{
-    width: 80px;
+    width: 60px;
   }
+}
+h2,h3{
+  font-family: 'Comfortaa', cursive;
 }

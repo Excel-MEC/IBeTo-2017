@@ -1,30 +1,20 @@
 $(document).ready(function(){
 	console.log($(window).width());
 	var rules = ["Some rules about general","Some rules about team size","Some rules about Eligibility","Some rules about abstract details"];
-	// $(window).resize(function(){
-	// 	console.log($(window).width());
-	// 	if ($(window).width()>800) {
-	// 		$('.rules_data>p').css({'opacity':'0'});
-	// 	}
-	// 	else{
-	// 		$('.rules_data>p').css({'opacity':'1'})
-	// 	}
-
-	// });
-	$('.rule_template').html(rules[0]);
+	$('.rule_template').html($('#gen').html());
 	$('.rules_data').click(function(){
 		var clickedElement = $(this).attr('id');
 		console.log(clickedElement);
 		if (clickedElement=="General") {
-			var html = rules[0];
+			var html = $('#gen').html();
 			fadeToggle(html);
 		}
 		else if (clickedElement=="Team_Size") {
-			var html = rules[1];
+			var html = $('#abs').html();
 			fadeToggle(html)
 		}
 		else if (clickedElement=="Eligibility") {
-			var html = rules[2];
+			var html = $('#elg').html();
 			fadeToggle(html);
 		}
 		else{

@@ -5,42 +5,95 @@ body{
 	display: flex;
 	position: relative;
 	height: 100vh;
+	background: white;
+	transition: background 0.5s;
 }
 .circle{
-	width: 400px;
+	/*width: 400px;*/
 	position: absolute;
-	height: 400px;
+	/*height: 400px;*/
 	top: 50%;
-	border-radius: 100%;
-	border-color: #000000;
-	border-width: 3px;
-	border-style: solid;
-	transform: translate(-50%,-50%);
+	list-style: none;
+	transform: translate(0,-50%);
 }
 .rulesicon{
-	position: absolute;
+	/*position: absolute;*/
 	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	text-align: right;
 	top: 50%;
-	transform: translate(0%,-50%)rotate(0deg);
-	transition: transform 1s;
+	/*transform: translate(0%,-50%)rotate(0deg);*/
+	transition: transform 0.5s;
+}
+
+.active_tab{
+	transform: scale(1.2);
 }
 
 .icon{
-	transform: translate(50%,0%);
+	/*transform: translate(50%,0%);*/
+	transition: transform 0.5s;
 }
-h2{
-	text-align: center;
-}
+
 .text{
-	margin: auto;
-	/*transform: translateY(200%);*/
+	width: 90%;
+	/*text-align: center;*/
+	margin-right: 20px;
+	transform-origin: 0 50%;
+	transform: translate(0,-50%) rotate(0deg);
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transition: transform 1s;
+
 }
 
 .initial{
 	transform: translate(0,-50%) rotate(180deg);
 }
 
+.content_area{
+	margin-right: 0;
+  margin-left: auto;
+  width: 60%;
+}
+@media(max-width:700px){
+	.circle{
+		display: none;
+	}
+	.video{
+		display: none;
+	}
+	.text{
+		position: relative;
+	}
+	.initial{
+		transform: none;
+	}
+	.rulesCircle{
+		display: block;
+	}
+	.content_area{
+		width: 90%;
+		margin: auto;
+	}
+	.timeline_area{
+		display: none;
+	}
+	.logos_section{
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	.hackathon{
+		width: 90%;
+		margin: auto;
+	}
+	.logos_section img{
+
+		height: 100px;
+	}
+}
 /*.animate-tohidden-fwd{
 	animation-name: currToHiddenFwd;
 	animation-duration: 1s;

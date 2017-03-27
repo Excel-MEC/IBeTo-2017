@@ -5,46 +5,69 @@
     <title>Timeline</title>
   </head>
   <style>
-    .timeline p{
+    .timeline div{
       position: absolute;
+      width: auto;
       right: 0;
       top:0;
       margin: 0;
       transform: translate(50%,-100%);
+      text-align: center;
     }
     .timeline{
-      background-image: url('imgs/dep.png');
+      background-image: url('imgs/road12.png');
       background-position: center;
+      background-size: 70px 300px;
       position: relative;
-      width: 140px;
-      height: 512px;
+      width: 70px;
+      height: 300px;
       background-repeat: no-repeat;
+      margin-top: auto;
+      margin-bottom: auto;
+      /*transform: rotate(180deg);*/
     }
     .timeline2{
-      background-image: url('imgs/dep2.png');
+      background-image: url('imgs/road22.png');
       background-position: center;
       position: relative;
-      width: 140px;
-      height: 512px;
+      background-size: 70px 300px;
+      width: 70px;
+      margin-top: auto;
+      margin-bottom: auto;
+      height: 300px;
       background-repeat: no-repeat;
     }
-    .timeline2 p{
-      right: 0;
+    .timeline2 div{
+      left: 100%;
       bottom: 0;
-      transform: translate(50%,100%);
+      transform: translate(-50%,100%);
       position: absolute;
       margin: 0;
+      text-align: center;
+    }
+    body{
+      height: 100vh;
     }
   </style>
   <body>
-    <div style="display:flex;width:280px;">
+    <div style="display:flex;height:100%;margin:auto;width:auto;">
       <div class="timeline">
-        <!-- <img src="imgs/dep.png"> -->
-        <p>some details</p>
+        <div>
+          <h3>Date 03</h3>
+          <p>Idea submission</p>
+        </div>
       </div>
       <div class="timeline2">
-        <!-- <img src="imgs/dep.png"> -->
-        <p>some details</p>
+        <div>
+          <h3>Date 03</h3>
+          <p>Idea submission</p>
+        </div>
+      </div>
+      <div class="timeline">
+        <div>
+          <h3>Date 03</h3>
+          <p>Idea Submission</p>
+        </div>
       </div>
     </div>
   </body>
