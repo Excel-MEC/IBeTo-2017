@@ -12,10 +12,59 @@ section{
 .parallax{
   position: absolute;
   z-index: 0;
-  background-image: url('../imgs/bghack.jpg');
   height: 100%;
   top: 0;
   width: 100%;
+}
+
+h2,h3{
+  font-family: 'Comfortaa', cursive;
+}
+
+.button{
+  background-color: #0097A7;
+  color: white;
+  padding: 15px 32px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 10px;
+  margin-right: 30px;
+}
+.one img{
+  margin: auto;
+  width: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.loadingAimation{
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: white;
+  transition: opacity 1s;
+}
+.bottomHackathon{
+  float: right;
+  width: 450px;
+  position: absolute;
+  margin-bottom: 0;
+  bottom: 30px;
+  right: 30px;
+}
+.intro p{
+  line-height: 25px;
+}
+.hackathon{
+  width: 50%;
+}
+.hackathon p{
+  font-size: 20px;
 }
 
 @media(min-width:320px){
@@ -25,21 +74,37 @@ section{
   .ibetologo{
     width: 200px;
   }
+  .bottomHackathon{
+    display: none;
+  }
+  .topHackathon{
+    display: none;
+  }
   #cup,#pad,#marker,#laptop{
     display: none;
   }
   .ibetointro{
+    color: black;
     font-size: 15px;
-    background-color:#002;
+  }
+  .hackathon h2,h3,p{
+    position: relative;
+    z-index: 90;
+  }
+  .rewards{
+    color: #1f7d56;
   }
 }
 @media(min-width:768px){
+  .bottomHackathon{
+    display: block;
+  }
   .main{
     /*height: 100vh;*/
     position: relative;
   }
   .ibetointro{
-    background-color:#002;
+    color: black;
     font-size:20px;
   }
   .ibetologo{
@@ -96,7 +161,7 @@ section{
     text-align: center;
     padding-top: 50px;
     position: relative;
-    z-index: 99;
+    z-index: 90;
     padding-bottom: 50px;
   }
   .hackathon>h2{
@@ -121,14 +186,12 @@ section{
   .parallax{
     position: absolute;
     z-index: 0;
-    background-image: url('../imgs/bghack.jpg');
     height: 100%;
     top: 0;
     width: 100%;
   }
   .parallax>img{
-    width: 200px;
-    position: absolute;
+
   }
   #cup,#pad,#marker,#laptop{
     display: block;
@@ -176,7 +239,10 @@ section{
     transition-delay: 0.1s;
   }
   .hidden{
-    transform: translate(0,1000px);
+    transform: translate(2000px,1000px);
+  }
+  .hidden1{
+    transform: translate(-2000px,-1000px);
   }
   .coverimg{
     display: unset;
@@ -202,7 +268,7 @@ section{
     padding-top: 50px;
   }
   .logos_section img{
-    height: 80px;
+    height: 200px;
   }
   .rewards{
     display: flex;
@@ -383,7 +449,10 @@ section{
   .icon{
     width: 60px;
   }
-}
-h2,h3{
-  font-family: 'Comfortaa', cursive;
+  .rocket{
+    height: 100px;
+    position: absolute;
+    right: 70%;
+    top: 70%;
+  }
 }

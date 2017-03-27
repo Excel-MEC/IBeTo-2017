@@ -58,7 +58,7 @@ body{
   margin-left: auto;
   width: 60%;
 }
-@media(max-width:700px){
+@media(max-width:1024px){
 	.circle{
 		display: none;
 	}

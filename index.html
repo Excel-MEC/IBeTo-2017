@@ -14,51 +14,146 @@
     <script src ="js/index.js"></script>
     <script src="js/dial.js"></script>
   	<script src="js/jquery.mousewheel.js"></script>
+    <script src="js/animation.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/animation.css">
 
     <link href="https://fonts.googleapis.com/css?family=Comfortaa|Josefin+Sans" rel="stylesheet">
     <style>
-
+      a{
+        text-decoration: none;
+        color: white;
+      }
     </style>
     <script>
-    $(document).ready(function() {
-    $('#fullpage').fullpage({
-      // autoScrolling: false,
-        afterLoad: function(anchorLink, index){
-          if(index==6){
-            if($(window).width()>700){
-              $.fn.fullpage.setAllowScrolling(false);
-              setTimeout(trigger,1000);
+    window.onload = function() {
+      setTimeout(animationinit,2000);
+      $('.one').css({'opacity':'0'});
+      setTimeout(function(){
+        $('.one').css({'z-index':'-1'});
+      },1000);
+      $('#fullpage').fullpage({
+        // autoScrolling: false,
+          afterLoad: function(anchorLink, index){
+            if(index==4){
+              if($(window).width()>1024){
+                $.fn.fullpage.setAllowScrolling(false);
+                setTimeout(trigger,1000);
+              }
+            }
+            if(index==3){
+              $('.tophackathon').removeClass('hidden1');
+              setTimeout(function(){
+                $('.bottomHackathon').removeClass('hidden');
+              },350);
             }
           }
-          if(index==5){
-            $('#cup').removeClass('hidden');
-            $('#marker').removeClass('hidden');
-            $('#laptop').removeClass('hidden');
-            $('#pad').removeClass('hidden');
-          }
-        }
-    });
-    if($(window).width()<700){
-      $.fn.fullpage.setAutoScrolling(false);
-      $.fn.fullpage.setFitToSection(false);
-      $('#cover1').css({'display':'none'});
-      $('#cover2').css({'display':'none'});
-      $('#cover3').css({'display':'none'});
-    }
-});
+      });
+      if($(window).width()<1024){
+        $.fn.fullpage.setAutoScrolling(false);
+        $.fn.fullpage.setFitToSection(false);
+        $('#cover1').css({'display':'none'});
+        $('#cover2').css({'display':'none'});
+        $('#cover3').css({'display':'none'});
+      }
+  }
     </script>
   </head>
   <body>
+    <div class="loadingAimation one">
+      <img src="imgs/ibgif.gif">
+    </div>
     <div id="fullpage">
-      <div class="section" id="cover1">
-      </div>
-      <div class="section coverimg img1" id="cover2">
-      </div>
-      <div class="section coverimg img2" id="cover3">
+      <div class="section" id="cover1" style="background-color:#264348;">
+        <p class="descanim">Ibeto</p>
+      	<div class="bulblit">
+      						<?xml version="1.0" encoding="utf-8"?>
+      		<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+      		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+      			 viewBox="0 0 443.2 586.5" style="enable-background:new 0 0 443.2 586.5;" xml:space="preserve">
+      		<style type="text/css">
+      			.st0{fill:url(#SVGID_1_);}
+      			.st1{fill:#d8d8d8;}
+      			.st2{fill:#FFBF31;}
+      			.st3{fill:#FFFFFF;}
+      			.st4{fill:#254763;}
+      			.st5{fill:#6CA9CA;}
+      			.st6{fill:#649CBA;}
+      		</style>
+      		<g id="Halo">
+      			<g id="glow">
+      				<g id="XMLID_4_">
+      					<g>
+      						<radialGradient id="SVGID_1_" cx="226.1" cy="209.7" r="268.5093" gradientUnits="userSpaceOnUse">
+      							<stop  offset="0" style="stop-color:#FFC000"/>
+      							<stop  offset="0.5322" style="stop-color:#FFC000"/>
+      							<stop  offset="0.7822" style="stop-color:#FFFFFF;stop-opacity:0"/>
+      							<stop  offset="1" style="stop-color:#FFFEF9;stop-opacity:2.290824e-02"/>
+      						</radialGradient>
+      						<ellipse class="st0" cx="226.1" cy="209.7" rx="278.9" ry="257.7"/>
+      					</g>
+      					<g>
+      					</g>
+      				</g>
+      			</g>
+      		</g>
+      		<g id="Layer_1">
+      			<g id="bulb">
+      				<path id="bulb-intact" class="st1" d="M291.3,385.8v-31.5c53.1-25.4,89.8-79.6,89.8-142.4c0-87.1-70.6-157.7-157.7-157.7
+      					S65.7,124.8,65.7,211.9c0,62.8,36.7,117,89.8,142.4v31.5"/>
+      				<path id="bulb-broken" class="st1" d="M291.3,385.8v-31.5c53.1-25.4,92.7-79.7,89.8-142.4c-1-22.8-0.9-38.2-13.1-62.9
+      					c-18.2-37.1-25.9-41.6-27.5-40.9l-1.5,4.1c0,0,0,0,0.1,1.6l3.9,15L323,132l-6,15l-22.8-15L262,150l-21.6-46L216,122l-21-27l-17,13
+      					l-8-22l-17.4,12l-5.5-24.1c-48.5,26.9-81.4,78.6-81.4,138c0,62.8,36.7,117,89.8,142.4v31.5"/>
+      			</g>
+      			<g id="bulb-tint">
+      				<path class="st2" d="M291.6,387.8v-31.5c53.1-25.4,89.8-79.6,89.8-142.4c0-2.6-0.1-5.1-0.2-7.7c-6.1,81.7-74.3,146.1-157.6,146.1
+      					S72.1,287.9,66,206.2c-0.1,2.5-0.2,5.1-0.2,7.7c0,62.8,36.7,117,89.8,142.4v31.5"/>
+      			</g>
+      			<g id="filament">
+      				<g>
+      					<g id="filament-intact">
+      						<polygon class="st3" points="210.9,242.4 192.9,237.4 179.1,243.8 160.9,233.7 162.6,246.2 162.6,246.2 183,389.4 189.6,389.4
+      							169.6,246.7 178.3,250.8 193.6,244.4 211.1,248.4 227.4,243.6 240.4,247.2 252.9,243.3 266.9,251.2 276.2,247 257.4,389.8
+      							262.4,389.4 283.6,236.4 266,245.3 252.6,237.7 240.5,242.1 226.9,237.9 				"/>
+      					</g>
+      					<g id="filament-broken">
+      						<polyline class="st3" points="240.4,216.7 260.2,214.7 267.6,237.7 276.9,241.5 257.4,389.8 262.4,389.4 283.6,236.4
+      							270.6,233.2 264.1,209.7 240.4,212.7 				"/>
+      						<polyline class="st3" points="211.3,200.3 192,206.2 177.3,231.5 160.9,233.7 162.6,246.2 183,389.4 189.6,389.4 168.2,236.4
+      							180,236.4 194.2,211.7 211.3,205.2 				"/>
+      					</g>
+      				</g>
+      			</g>
+      			<g id="base">
+      				<g id="XMLID_1_">
+      					<g>
+      						<path class="st4" d="M288.6,394.5v56c0,20.2-8.9,38.4-22.9,50.8c-1,24-20.8,43.1-45.1,43.1s-44-19.1-45.1-43.1
+      							c-14-12.5-22.9-30.6-22.9-50.8v-56L288.6,394.5L288.6,394.5z"/>
+      					</g>
+      				</g>
+      				<path class="st5" d="M291.7,386.4c4.5,0,8.1,3.6,8.1,8.1l0,0c0,4.5-3.6,8.1-8.1,8.1H149.6c-4.5,0-8.1-3.6-8.1-8.1l0,0
+      					c0-4.5,3.6-8.1,8.1-8.1"/>
+      				<path class="st5" d="M299.8,421.7c0,4.5-3.6,8.1-8.1,8.1H149.6c-4.5,0-8.1-3.6-8.1-8.1l0,0c0-4.5,3.6-8.1,8.1-8.1h142.1
+      					C296.1,413.6,299.8,417.2,299.8,421.7L299.8,421.7z"/>
+      				<path class="st5" d="M299.8,448.4c0,4.5-3.6,8.1-8.1,8.1H149.6c-4.5,0-8.1-3.6-8.1-8.1l0,0c0-4.5,3.6-8.1,8.1-8.1h142.1
+      					C296.1,440.2,299.8,443.9,299.8,448.4L299.8,448.4z"/>
+      				<path class="st5" d="M294.2,476.4c0,4.5-3.6,8.1-8.1,8.1H155.2c-4.5,0-8.1-3.6-8.1-8.1l0,0c0-4.5,3.6-8.1,8.1-8.1h130.9
+      					C290.5,468.2,294.2,471.9,294.2,476.4L294.2,476.4z"/>
+      				<path class="st6" d="M291.7,397H149.6c-3.5,0-6.5-2.2-7.6-5.3c-0.3,0.9-0.5,1.8-0.5,2.8c0,4.5,3.6,8.1,8.1,8.1h142.1
+      					c4.5,0,8.1-3.6,8.1-8.1c0-1-0.2-1.9-0.5-2.8C298.1,394.8,295.2,397,291.7,397z"/>
+      				<path class="st6" d="M291.7,424.2H149.6c-3.5,0-6.5-2.2-7.6-5.3c-0.3,0.9-0.5,1.8-0.5,2.8c0,4.5,3.6,8.1,8.1,8.1h142.1
+      					c4.5,0,8.1-3.6,8.1-8.1c0-1-0.2-1.9-0.5-2.8C298.1,422,295.2,424.2,291.7,424.2z"/>
+      				<path class="st6" d="M291.7,450.9H149.6c-3.5,0-6.5-2.2-7.6-5.3c-0.3,0.9-0.5,1.8-0.5,2.8c0,4.5,3.6,8.1,8.1,8.1h142.1
+      					c4.5,0,8.1-3.6,8.1-8.1c0-1-0.2-1.9-0.5-2.8C298.1,448.7,295.2,450.9,291.7,450.9z"/>
+      				<path class="st6" d="M286.1,478.9H155.2c-3.5,0-6.5-2.2-7.6-5.3c-0.3,0.9-0.5,1.8-0.5,2.8c0,4.5,3.6,8.1,8.1,8.1h130.9
+      					c4.5,0,8.1-3.6,8.1-8.1c0-1-0.2-1.9-0.5-2.8C292.5,476.7,289.6,478.9,286.1,478.9z"/>
+      			</g>
+      		</g>
+      		</svg>
+      	</div>
       </div>
       <div class="section ibetointro">
         <div class="container intro">
-          <div style="text-align:center;color:white;">
+          <div style="text-align:center;">
             <img src="imgs/ibetoLogoFinal.png" class="ibetologo">
             <div>
               <p>IBeTo (Innovations for a Better Tomorrow) is the flagship event of Excel. It is a search for ideas and innovators capable of aiding social upliftment. IBETO was born out of the conviction that technology has the answers to some of society’s most daunting challenges. This national level pursuit has received overwhelming responses from all over India and have brought several innovations to the forefront. The brightest of these ideas are recognized and mentored to realize the end product. IBeTo, thus, strives to be the bridge joining social relevance and technical innovation, to connect the pioneer and the populace.</p>
@@ -68,10 +163,12 @@
       </div>
       <div class="section">
         <div class="parallax">
-          <img class="hidden" src="imgs/cup.png" id="cup">
+          <!-- <img class="hidden" src="imgs/cup.png" id="cup">
           <img class="hidden" src="imgs/laptop1.png" id="laptop">
           <img class="hidden" src="imgs/notepad.png" id="pad">
-          <img class="hidden" style="" src="imgs/marker.png" id="marker">
+          <img class="hidden" style="" src="imgs/marker.png" id="marker"> -->
+          <img src="imgs/topleft.svg" class="tophackathon hidden1">
+          <img src="imgs/bottomright.svg" class="bottomHackathon hidden">
         </div>
         <div class="container hackathon">
           <h2>HACKATHON</h2>
@@ -100,7 +197,7 @@
       		</ul>
       		<div class="text" id="introcontent">
             <div class="content_area">
-              <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/rpIlP6pI8fo" frameborder="0" allowfullscreen></iframe>
+              <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/pH3VHpkwbjo" frameborder="0" allowfullscreen></iframe>
         			<h2>Problem Statements</h2>
         			<p>IBeTo 2017 will curate and foster ideas that adhere to the following problem statements and ultimately usher in a better tomorrow:</p>
                 <p>Revolutionizing Road Safety</p>
@@ -108,13 +205,16 @@
                 <p>Providing easy educational access for all</p>
                 <p>Betterment of General Health care in Rural Areas</p>
                 <p>Combating environmental degradation while ensuring energy conservation</p>
+                <button class="button">Register Here</button>
+                <button class="button"><a href="assets/rules.pdf">Rules</a></button>
             </div>
       		</div>
       		<div class="text initial" id="hackcontent">
             <div class="content_area timeline_area">
-              <h2 style="color:white;padding:150px;">Timeline</h2>
+              <h2 style="color:white;padding:150px;">Routemap</h2>
               <div style="display:flex;height:100%;margin:auto;" class="timeline-content">
                 <div class="timeline">
+                  <img class="rocket" src="imgs/rocket.png">
                   <div>
                     <h3>APR 3rd-4th</h3>
                     <p>Hackathon</p>
@@ -184,19 +284,22 @@
       				<div class="names_container">
                 <div>
                   <h3>Arjun Saju</h3>
-                  <p>Excel Chairman</p>
+                  <p>Chairman,</p>
+                  <p>Excel 2017</p>
                   <p>+91 8943239997</p>
                   <p>arjunsaju@excelmec.org</p>
                 </div>
                 <div>
                   <h3>Sharon Rachel Manu</h3>
-                  <p>Joint Secretary</p>
+                  <p>Joint Secretary,</p>
+                  <p>Excel 2017</p>
                   <p>+91 9633554696</p>
                   <p>sharonrachelmanu@excelmec.org</p>
                 </div>
                 <div>
                   <h3>Elza Tess Varkey</h3>
-                  <p>Social Initiatives Head</p>
+                  <p>Social Initiatives Head,</p>
+                  <p>Excel 2017</p>
                   <p>+91 9562391591</p>
                   <p>elzatessvarkey@excelmec.org</p>
                 </div>
