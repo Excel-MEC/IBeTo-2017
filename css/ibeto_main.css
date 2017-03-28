@@ -30,7 +30,7 @@ h2,h3{
   text-decoration: none;
   display: inline-block;
   font-size: 15px;
-  border-radius: 10px;
+  border-radius: 5px;
   margin-right: 30px;
 }
 .button h3{
@@ -101,10 +101,53 @@ h2,h3{
     display: none;
   }
 }
+@media(max-width:700px){
+  .hackathon{
+    width: 90%;
+    text-align: center;
+  }
+  .hackathon>h2::after{
+    position: absolute;
+    content: '';
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    width: 100%;
+    height: 15px;
+    margin: 0 0 0 -175px;
+    background-image: url('../imgs/title-underline.png');
+    background-repeat: no-repeat;
+  }
+  .button{
+    margin:auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .content_area{
+    text-align: center;
+  }
+  .names_container{
+    margin: auto;
+    width: 80%;
+  }
+  .names_container{
+    text-align: left;
+  }
+  .names_container>div{
+    margin-top:40px;
+  }
+  .text{
+    margin: auto;
+    width: 100%;
+  }
+}
 @media(min-width:768px){
   .descanim{
     display: block;
     font-size: 23px;
+  }
+  .hackathon{
+    width: 70%;
   }
   .hiddentext{
     transform: translate(-50%,-100%);
@@ -125,6 +168,7 @@ h2,h3{
     color: black;
     font-size:20px;
   }
+
   .title{
     margin: 0;
     text-align: center;
@@ -205,9 +249,6 @@ h2,h3{
     top: 0;
     width: 100%;
   }
-  .parallax>img{
-
-  }
   #cup,#pad,#marker,#laptop{
     display: block;
   }
@@ -243,7 +284,8 @@ h2,h3{
   }
   .names_container{
     display: flex;
-
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
   .names_container>div{
     padding: 20px;
@@ -252,6 +294,7 @@ h2,h3{
   .parallax>img{
     transition: transform 0.2s;
     transition-delay: 0.1s;
+    width: 350px;
   }
   .hidden{
     transform: translate(2000px,1000px);
@@ -280,10 +323,10 @@ h2,h3{
   .logos_section{
     display: flex;
     justify-content: space-around;
-    padding-top: 50px;
+    /*padding-top: 50px;*/
   }
   .logos_section img{
-    height: 200px;
+    height: 80px;
   }
   .rewards{
     display: flex;
@@ -297,6 +340,7 @@ h2,h3{
   .timeline-content{
     width: 600px;
   }
+
 }
 
 @media(min-width:1024px){
@@ -351,7 +395,7 @@ h2,h3{
     text-align: center;
   }
   .content_area{
-    width: 70%;
+    width: 80%;
   }
   .college{
     position: absolute;

@@ -7,11 +7,9 @@
     <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/dial.css">
     <link rel="stylesheet" href="css/ibeto_main.css">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css">
     <script src="js/jquery.fullPage.min.js"></script>
     <script src="js/ibeto.js"></script>
-    <script src ="js/index.js"></script>
     <script src="js/dial.js"></script>
   	<script src="js/jquery.mousewheel.js"></script>
     <script src="js/animation.js"></script>
@@ -35,10 +33,10 @@
         // autoScrolling: false,
           afterLoad: function(anchorLink, index){
             if(index==4){
-              if($(window).width()>1024){
+              if($(window).width()>1000){
                 $.fn.fullpage.setAllowScrolling(false);
                 $.fn.fullpage.setKeyboardScrolling(false);
-                setTimeout(trigger,1000);
+                setTimeout(trigger,500);
               }
             }
             if(index==3){
@@ -49,7 +47,7 @@
             }
           }
       });
-      if($(window).width()<1024){
+      if($(window).width()<1000){
         $.fn.fullpage.setAutoScrolling(false);
         $.fn.fullpage.setFitToSection(false);
         $('#cover1').css({'display':'none'});
@@ -302,6 +300,13 @@
                   <p>arjunsaju@excelmec.org</p>
                 </div>
                 <div>
+                  <h3>Rahul Varghese Roy</h3>
+                  <p>Secretary,</p>
+                  <p>Excel 2017</p>
+                  <p>+91 9562391591</p>
+                  <p>rahulvargheseroy@excelmec.org</p>
+                </div>
+                <div>
                   <h3>Sharon Rachel Manu</h3>
                   <p>Joint Secretary,</p>
                   <p>Excel 2017</p>
@@ -317,6 +322,7 @@
                 </div>
               </div>
               <div class="logos_section">
+                <img src="imgs/mec_logo.png">
                 <img src="imgs/excel2017.png">
               </div>
       			</div>

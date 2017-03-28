@@ -102,6 +102,10 @@ function handleScroll(event,delta){
 				$(this).on('mousewheel',handleScroll);
 				$(this).on('keydown',handleScroll);
 			}
+			else{
+				$(this).on('mousewheel',handleScroll);
+				$(this).on('keydown',handleScroll);
+			}
 		},1020);
 	}
 }

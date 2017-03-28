@@ -58,7 +58,7 @@ body{
   margin-left: auto;
   width: 60%;
 }
-@media(max-width:1024px){
+@media(max-width:1000px){
 	.circle{
 		display: none;
 	}
@@ -90,7 +90,6 @@ body{
 		margin: auto;
 	}
 	.logos_section img{
-
 		height: 100px;
 	}
 }
