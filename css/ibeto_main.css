@@ -22,7 +22,7 @@ h2,h3{
 }
 
 .button{
-  background-color: #0097A7;
+  background-color: #1f7d56;
   color: white;
   padding: 15px 32px;
   border: none;
@@ -32,6 +32,7 @@ h2,h3{
   font-size: 15px;
   border-radius: 5px;
   margin-right: 30px;
+  margin-left: 30px;
 }
 .button h3{
   margin: 0;
@@ -70,7 +71,49 @@ h2,h3{
   font-size: 20px;
 }
 
+.social{
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  padding: 30px;
+}
+.social a{
+  /*color: black;*/
+  font-size: 40px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
 @media(min-width:320px){
+  .scrollicon{
+    display: none;
+  }
+  #hackcontent{
+    background-color: #26C281;
+    color: white;
+  }
+  .timeline_mob{
+    text-align: center;
+    margin: auto;
+    width: 90%;
+    margin-bottom: 100px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    bac
+  }
+  .timeline_mob h3{
+    width: 40%;
+  }
+  .timeline_mob li{
+    display: flex;
+  }
+  .timeline_mob ul{
+    padding: 0;
+  }
+  .timeline_mob p{
+    margin: auto;
+    width: 60%;
+  }
   div.coverimg{
     display: none;
   }
@@ -102,21 +145,29 @@ h2,h3{
   }
 }
 @media(max-width:700px){
+  .timeline_area{
+    display: none;
+  }
+  .social{
+    width: 80%;
+  }
+  .social a{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   .hackathon{
     width: 90%;
     text-align: center;
   }
+  .intro{
+    width: 90%;
+    margin: auto;
+  }
+  .logos_section img {
+    height: 50px;
+  }
   .hackathon>h2::after{
-    position: absolute;
-    content: '';
-    z-index: 1;
-    top: 100%;
-    left: 50%;
-    width: 100%;
-    height: 15px;
-    margin: 0 0 0 -175px;
-    background-image: url('../imgs/title-underline.png');
-    background-repeat: no-repeat;
+    display: none;
   }
   .button{
     margin:auto;
@@ -142,12 +193,13 @@ h2,h3{
   }
 }
 @media(min-width:768px){
+  .timeline_mob{
+    display: none;
+  }
   .descanim{
     display: block;
-    font-size: 23px;
-  }
-  .hackathon{
-    width: 70%;
+    font-size: 30px;
+    text-align: center;
   }
   .hiddentext{
     transform: translate(-50%,-100%);
@@ -215,12 +267,26 @@ h2,h3{
   .dial{
     height: 100vh;
   }
+  .text{
+    width: unset;
+  }
+  #hackcontent{
+    background-color: #26C281;
+    margin: unset;
+    padding-top: 50px;
+    margin-bottom: 100px;
+  }
   .hackathon{
     /*height: 100%;*/
     text-align: center;
     padding-top: 50px;
     position: relative;
     z-index: 90;
+    width: 70%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     padding-bottom: 50px;
   }
   .hackathon>h2{
@@ -288,7 +354,7 @@ h2,h3{
     justify-content: space-around;
   }
   .names_container>div{
-    padding: 20px;
+    padding: 5px;
     width: 30%;
   }
   .parallax>img{
@@ -326,7 +392,7 @@ h2,h3{
     /*padding-top: 50px;*/
   }
   .logos_section img{
-    height: 80px;
+    height: 50px;
   }
   .rewards{
     display: flex;
@@ -340,11 +406,6 @@ h2,h3{
   .timeline-content{
     width: 600px;
   }
-
-}
-
-@media(min-width:1024px){
-  /*timeline*/
   .timeline div{
     position: absolute;
     width: 120%;
@@ -360,6 +421,9 @@ h2,h3{
   }
   .timeline2 div h3,.timeline2 div {
     font-size: 15px;
+  }
+  .timeline_area{
+    display: block;
   }
   .timeline{
     background-image: url('../imgs/road12.png');
@@ -394,15 +458,149 @@ h2,h3{
     color: white;
     text-align: center;
   }
-  .content_area{
-    width: 80%;
-  }
   .college{
     position: absolute;
     bottom: 0;
     width: 80px;
     left: 100%;
   }
+}
+
+@media(min-width:1024px){
+  /*timeline*/
+  .scrollicon{
+    width: 50px;
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    bottom: 5%;
+    cursor: pointer;
+    animation: 2s ease-in-out 0s normal infinite;
+    opacity: 0;
+  }
+  #hackcontent{
+    background-color: unset;
+    margin: unset;
+    padding-top: unset;
+    margin-bottom: unset;
+  }
+  .text{
+    width: 90%;
+  }
+  .ls{
+    position: absolute;
+    width: 120%;
+    transition: opacity 0.5s;
+    animation-duration: 0.5s;
+    transform: translate(0,1000px);
+  }
+  .names_container>div{
+    width: unset;
+  }
+  .hackathon{
+    background-color: unset;
+    border-radius: 0px;
+  }
+  .hidescn{
+    opacity: 0;
+  }
+  .grd{
+    bottom: 0;
+    width: 100%;
+  }
+  .grdu{
+    bottom: 0;
+    width: 100%;
+    transform: translate(0,0);
+  }
+  .mnt1{
+    bottom: 15%;
+  }
+  .mnt2{
+    bottom: 0;
+  }
+  .sky{
+    top: 0;
+  }
+  .moon{
+    width: 80px;
+    transform: translate(0,-1000px);
+    left: 10%;
+    top: 5%;
+  }
+  .star{
+    transform: translate(0,0);
+    transition: opacity 0.5s;
+    /*opacity: 0;*/
+  }
+  #star1{
+    top: 20%;
+    width: 40px;
+    left: 10%;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+  }
+  #star2{
+    top: 10%;
+    width: 40px;
+    right: 10%;
+    animation-iteration-count: infinite;
+    animation-delay: 1.2s;
+    animation-duration: 3s;
+  }
+  #star3{
+    top: 15%;
+    width: 40px;
+    right: 60%;
+    animation-delay: 1.5s;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+  }
+
+  .content_area{
+    width: 80%;
+  }
+
+}
+
+@media (min-width: 1400px){
+  .logos_section img{
+    height: 70px;
+  }
+  .ls{
+    position: absolute;
+    width: 100%;
+  }
+  .grd{
+    bottom: 0;
+  }
+  .mnt1{
+    bottom: 20%;
+  }
+  .mnt2{
+
+  }
+  .sky{
+    top: 0;
+  }
+  .moon{
+    width: 80px;
+    left: 10%;
+    top: 5%
+  }
+}
+
+
+.instagram{
+  color: #dc3080;
+}
+.youtube{
+  color: #de2825;
+}
+.facebook{
+  color: #3b5998;
 }
 
 /*timeline styles*/

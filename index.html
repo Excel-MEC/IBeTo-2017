@@ -2,14 +2,16 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>IBeTo</title>
-    <meta name="viewport" content="width=device-width">
+    <title>IBeTo | Excel 2017</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/dial.css">
     <link rel="stylesheet" href="css/ibeto_main.css">
     <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css">
+    <link rel="shortcut icon" href="imgs/favicon.png">
+    <script src="https://use.fontawesome.com/75bc5066dd.js"></script>
     <script src="js/jquery.fullPage.min.js"></script>
-    <script src="js/ibeto.js"></script>
+    <!-- <script src="js/ibeto.js"></script> -->
     <script src="js/dial.js"></script>
   	<script src="js/jquery.mousewheel.js"></script>
     <script src="js/animation.js"></script>
@@ -21,9 +23,15 @@
         text-decoration: none;
         color: white;
       }
+      #cover1{
+        overflow: hidden;
+      }
     </style>
     <script>
     window.onload = function() {
+      $('#scrollic').click(function(){
+    		$.fn.fullpage.moveSectionDown();
+    	});
       setTimeout(animationinit,2000);
       $('.one').css({'opacity':'0'});
       setTimeout(function(){
@@ -62,7 +70,7 @@
       <img src="imgs/ibgif.gif">
     </div>
     <div id="fullpage">
-      <div class="section" id="cover1" style="background-color:#264348;">
+      <div class="section" id="cover1" style="background-color:#264348;position:relative;">
         <p class="descanim hiddentext" id="1">An IDEA lit by a poor filament</p>
         <p class="descanim hiddentext" id="2">Flickers</p>
         <p class="descanim hiddentext" id="3">Dies</p>
@@ -73,9 +81,12 @@
         <p class="descanim hiddentext" id="8">An IDEA driven by the right amount of innovation and social responsibility</p>
         <p class="descanim hiddentext" id="9">Lights, Shines</p>
         <p class="descanim hiddentext change" id="10">and Triggers CHANGE!</p>
+        <p class="descanim hiddentext" id="11">It drives away darkness</p>
+        <p class="descanim hiddentext" id="12">Lights up homes</p>
+        <p class="descanim hiddentext" id="13">It lights up LIVES</p>
+        <p class="descanim hiddentext" id="14">Innovations for a Better Tomorrow</p>
       	<div class="bulblit">
       						<?xml version="1.0" encoding="utf-8"?>
-      		<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
       		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
       			 viewBox="0 0 443.2 586.5" style="enable-background:new 0 0 443.2 586.5;" xml:space="preserve">
       		<style type="text/css">
@@ -158,8 +169,17 @@
       		</g>
       		</svg>
       	</div>
-        <div>
-        </div>
+        <img class="ls sky hidescn" src="imgs/cover/sky-color.png">
+        <img class="ls mnt1 hidescn" src="imgs/cover/mountain.png">
+        <img class="ls grd hidescn" src="imgs/cover/ground_housesunlit.png">
+        <img class="ls grdu hidescn" src="imgs/cover/ground_houses.png">
+        <img class="ls mnt2 hidescn" src="imgs/cover/mountain1.png">
+        <img class="ls moon hidescn" src="imgs/cover/moon.png">
+        <img class="ls star hidescn" id="star1" src="imgs/cover/star.png">
+        <img class="ls star hidescn" id="star2" src="imgs/cover/star.png">
+        <img class="ls star hidescn" id="star3" src="imgs/cover/star.png">
+        <img class="scrollicon" src="imgs/scroll.png" id="scrollic">
+        <!-- <div> -->
       </div>
       <div class="section ibetointro">
         <div class="container intro">
@@ -187,6 +207,8 @@
             <h3>Duration: 24 hours</h3>
             <h3>Prizes worth 15k</h3>
           </div>
+          <h3 style="color:#1f7d56">Venue: <a target="_blank" style="color:#1f7d56;text-decoration:underline;cursor:pointer" href="https://goo.gl/maps/rmv95TuNoAk">Kerala Startup Mission, North Kalamassery, Kochi</a></h3>
+          <a class="button" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdvNLUBRPOL-9-8taj0Xp6nHzhcC353no9nYjAI66R4c8pWPg/viewform?c=0&w=1&usp=mail_form_link"><h3>Register Here</h3></a>
         </div>
       </div>
       <section class="dial section" id="dial">
@@ -207,45 +229,47 @@
       		</ul>
       		<div class="text" id="introcontent">
             <div class="content_area">
-              <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/pH3VHpkwbjo" frameborder="0" allowfullscreen></iframe>
+              <!-- <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/dZtZkBzJVWc" frameborder="0" allowfullscreen></iframe> -->
         			<h2>Problem Statements</h2>
         			<p>IBeTo 2017 will curate and foster ideas that adhere to the following problem statements and ultimately usher in a better tomorrow:</p>
-                <p>Revolutionizing Road Safety</p>
-                <p>Innovations beneficial for the Differently abled</p>
-                <p>Providing easy educational access for all</p>
-                <p>Betterment of General Health care in Rural Areas</p>
-                <p>Combating environmental degradation while ensuring energy conservation</p>
-                <a class="button" target="_blank" href="www.google.com"><h3>Register Here</h3></a>
+              <ul>
+                <li><p>Revolutionizing Road Safety</p></li>
+                <li><p>Innovations beneficial for the Differently abled</p></li>
+                <li><p>Providing easy educational access for all</p></li>
+                <li><p>Betterment of General Health care in Rural Areas</p></li>
+                <li><p>Combating environmental degradation while ensuring energy conservation</p></li>
+              </ul>
+                <a class="button" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSekER_xxBEPCg1si3KL0Ht2Mux9Lf9c1xbI3co-gCLk4bdjqQ/viewform?c=0&w=1&usp=mail_form_link"><h3>Register Here</h3></a>
                 <a class="button" target="_blank" href="assets/rules.pdf"><h3>Rules</h3></a>
             </div>
       		</div>
       		<div class="text initial" id="hackcontent">
             <div class="content_area timeline_area">
-              <h2 style="color:white;padding:150px;">Routemap</h2>
+              <h2 style="color:white;padding:150px;">Roadmap</h2>
               <div style="display:flex;height:100%;margin:auto;" class="timeline-content">
                 <div class="timeline">
                   <img class="rocket" src="imgs/rocket.png">
-                  <div>
-                    <h3>APR 3rd-4th</h3>
-                    <p>Hackathon</p>
-                  </div>
-                </div>
-                <div class="timeline2">
                   <div>
                     <h3>APR 1st-29th</h3>
                     <p>Abstracts invitation</p>
                   </div>
                 </div>
-                <div class="timeline">
+                <div class="timeline2">
                   <div>
                     <h3>APR 29</h3>
                     <p>Teams shortlisting</p>
                   </div>
                 </div>
+                <div class="timeline">
+                  <div>
+                    <h3>APR 29-30</h3>
+                    <p>Hackathon</p>
+                  </div>
+                </div>
                 <div class="timeline2">
                   <div>
                     <h3>MAY 7</h3>
-                    <p>Assign mentors</p>
+                    <p>Assigning mentors</p>
                   </div>
                 </div>
                 <div class="timeline">
@@ -280,12 +304,27 @@
                 </div>
                 <div class="timeline2">
                   <div>
-                    <h3>SEP 18</h3>
+                    <h3>Excel day</h3>
                     <p>Video and presentation</p>
                   </div>
                   <img class="college" src="imgs/college.png">
                 </div>
               </div>
+            </div>
+            <div class="timeline_mob">
+              <h2>Routemap</h2>
+              <ul class="tlmob">
+                <li><h3>APR 1st-29th :</h3><p>Abstracts invitation</p></li>
+                <li><h3>APR 29 :</h3><p>Teams shortlisting</p></li>
+                <li><h3>APR 29-30 :</h3><p>Hackathon</p></li>
+                <li><h3>MAY 7 :</h3><p>Assigning mentors</p></li>
+                <li><h3>MAY 20 :</h3><p>Submission of project plan</p></li>
+                <li><h3>MAY 27 :</h3><p>Evaluation of plans</p></li>
+                <li><h3>JUN 29 :</h3><p>Mid evaluation</p></li>
+                <li><h3>JUL 26 :</h3><p>Evaluation of prototype</p></li>
+                <li><h3>AUG 26 :</h3><p>Evaluation of development</p></li>
+                <li><h3>Excel day :</h3><p>Video and presentation</p></li>
+              </ul>
             </div>
       		</div>
       		<div class="text initial" id="timecontent">
@@ -303,8 +342,8 @@
                   <h3>Rahul Varghese Roy</h3>
                   <p>Secretary,</p>
                   <p>Excel 2017</p>
-                  <p>+91 9562391591</p>
-                  <p>rahulvargheseroy@excelmec.org</p>
+                  <p>+91 9349558200</p>
+                  <p>rahulvarghese@excelmec.org</p>
                 </div>
                 <div>
                   <h3>Sharon Rachel Manu</h3>
@@ -321,8 +360,13 @@
                   <p>elzatessvarkey@excelmec.org</p>
                 </div>
               </div>
+              <div class="social">
+                <a class="facebook" target="_blank" href="http://facebook.com/excelmec"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                <a class="youtube" target="_blank" href="https://www.youtube.com/channel/UCLP9HOgPekLpFzv2xIVwoFg"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                <a class="instagram" target="_blank" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              </div>
               <div class="logos_section">
-                <img src="imgs/mec_logo.png">
+                <a href="http://mec.ac.in/" target="_blank"><img src="imgs/mec_logo.png"></a>
                 <img src="imgs/excel2017.png">
               </div>
       			</div>

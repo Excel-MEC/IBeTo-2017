@@ -9,17 +9,36 @@
 }
 
 .flicker{
-	animation-duration: 0.2s;
+	animation-duration: 1s;
 	animation-name: flick;
 	animation-iteration-count: infinite;
+}
+.exp{
+	transition: width 0.5s;
+	display: inline;
 }
 
 @keyframes flick{
 	0%{
 		fill: #FFC533;
 	}
-	100%{
+	10%{
 		fill: #d8d8d8;
+	}
+	15%{
+		fill: #FFC533;
+	}
+	70%{
+		fill: #d8d8d8;
+	}
+	75%{
+		fill: #FFC533;
+	}
+	/*90%{
+		fill: #d8d8d8;
+	}*/
+	100%{
+		fill: #FFC533;
 	}
 }
 #filament-broken{
@@ -64,4 +83,57 @@
 	transform: translate(-50%,0%);
 	transition: transform 0.5s,opacity 0.5s;
 	color: white;
+}
+
+@keyframes animate_scn{
+	0%{
+		opacity: 0;
+		transform: translate(0,1000px);
+	}
+	80%{
+		transform: translate(0,-10%);
+		opacity: 1;
+	}
+	100%{
+		transform: translate(0,0);
+		opacity: 1;
+	}
+}
+@keyframes animate_moon{
+	0%{
+		opacity: 0;
+		transform: translate(0,-1000px);
+	}
+	80%{
+		transform: translate(0,10%);
+		opacity: 1;
+	}
+	100%{
+		transform: translate(0,0);
+		opacity: 1;
+	}
+}
+
+@keyframes animate_star{
+	0%{
+		transform: scale(1);
+	}
+	80%{
+		transform: scale(1.5);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+
+@keyframes blink {
+	0%{
+		opacity: 1;
+	}
+	50%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
 }

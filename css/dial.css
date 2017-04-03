@@ -37,7 +37,6 @@ body{
 }
 
 .text{
-	width: 90%;
 	/*text-align: center;*/
 	margin-right: 20px;
 	transform-origin: 0 50%;
@@ -46,7 +45,6 @@ body{
 	left: 0;
 	top: 50%;
 	transition: transform 1s;
-
 }
 
 .initial{
@@ -77,9 +75,6 @@ body{
 	.content_area{
 		width: 90%;
 		margin: auto;
-	}
-	.timeline_area{
-		display: none;
 	}
 	.logos_section{
 		padding-top: 20px;
